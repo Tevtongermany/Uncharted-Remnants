@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqwqjx58onyvp"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ppe7m"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+spread = 180.0
+gravity = Vector3(0, 98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+
+[node name="Stone_falling" type="GPUParticles2D"]
+position = Vector2(7, -28)
+rotation = 2.21984
+amount = 10000
+process_material = SubResource("ParticleProcessMaterial_ppe7m")

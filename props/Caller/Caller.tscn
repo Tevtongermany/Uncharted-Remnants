@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://bengu60v6slwf"]
+
+[ext_resource type="Script" path="res://props/Caller/Caller.gd" id="1_74lob"]
+[ext_resource type="Texture2D" uid="uid://dxt2rxnw21wga" path="res://Assets/Cat/sleep.png" id="2_g61xe"]
+[ext_resource type="Texture2D" uid="uid://c5q5tdanyspji" path="res://Assets/Cat/catsleepy.png" id="3_jw1iq"]
+[ext_resource type="Texture2D" uid="uid://qdn243og8nqx" path="res://Assets/Cat/Cat.png" id="4_ja7wg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mbd5c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g61xe")
+}],
+"loop": true,
+"name": &"button",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jw1iq")
+}],
+"loop": true,
+"name": &"lever",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ja7wg")
+}],
+"loop": true,
+"name": &"pressure_plate",
+"speed": 5.0
+}]
+
+[node name="Caller" type="Node2D"]
+script = ExtResource("1_74lob")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mbd5c")
+animation = &"pressure_plate"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -8.0
+offset_top = -14.0
+offset_right = 32.0
+offset_bottom = 12.0
+scale = Vector2(0.457, 0.457)

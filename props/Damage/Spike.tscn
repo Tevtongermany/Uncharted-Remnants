@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhwe64yibci4f"]
+
+[ext_resource type="Texture2D" uid="uid://bg66ksfbxxuer" path="res://Assets/Tiles/Spike/Spike.png" id="1_2q16g"]
+[ext_resource type="Script" path="res://props/Damage/Spike.gd" id="1_o532g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2iwlt"]
+size = Vector2(16, 8)
+
+[node name="Damage Node" type="Node2D"]
+script = ExtResource("1_o532g")
+
+[node name="Spike" type="Sprite2D" parent="."]
+texture = ExtResource("1_2q16g")
+
+[node name="Area2D" type="Area2D" parent="."]
+light_mask = 3
+visibility_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_2iwlt")

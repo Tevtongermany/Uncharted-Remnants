@@ -1,0 +1,70 @@
+[gd_scene load_steps=12 format=3 uid="uid://c0cn3x7kdiagf"]
+
+[ext_resource type="Texture2D" uid="uid://bc3cqng34ks7a" path="res://Assets/Tiles/Crate/Box.png" id="1_jc1ln"]
+[ext_resource type="TileSet" uid="uid://c1j4ixeod6f3s" path="res://Tilemap/Terrains.tres" id="7_3vtmg"]
+[ext_resource type="PackedScene" uid="uid://y5umydnah5lu" path="res://Player/Cat.tscn" id="8_yrswb"]
+[ext_resource type="PackedScene" uid="uid://nlkteqf1vkfx" path="res://props/Receiver/Door/Door.tscn" id="9_gjag4"]
+[ext_resource type="PackedScene" uid="uid://b570y16x5lkmb" path="res://props/Physics/Ball/Ball.tscn" id="9_vdxsq"]
+[ext_resource type="PackedScene" uid="uid://yjabmq8cfifj" path="res://props/Caller/plate/pressure_plate.tscn" id="10_5nfhk"]
+[ext_resource type="PackedScene" uid="uid://bxmdp8bt2oft3" path="res://props/Caller/Lever/Lever.tscn" id="10_is7bp"]
+[ext_resource type="PackedScene" uid="uid://dhwe64yibci4f" path="res://props/Damage/Spike.tscn" id="10_tc66x"]
+[ext_resource type="PackedScene" uid="uid://db6o2i641l8bp" path="res://props/Receiver/webrequester/webrequest.tscn" id="11_468wg"]
+[ext_resource type="PackedScene" path="res://props/Receiver/Debug log printer/logprinter.tscn" id="11_b4bw6"]
+[ext_resource type="PackedScene" uid="uid://qk6ty1mnxew" path="res://props/Receiver/Laser/laser.tscn" id="11_xkvq2"]
+
+[node name="Dev" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+visibility_layer = 3
+tile_set = ExtResource("7_3vtmg")
+format = 2
+layer_0/tile_data = PackedInt32Array(393214, 131072, 0, 393215, 196608, 0, 327680, 65536, 0, 327681, 131072, 0, 327682, 196608, 0, 327683, 65536, 0, 327684, 131072, 0, 327685, 196608, 0, 327686, 65536, 0, 327687, 131072, 0, 327688, 65536, 0, 393213, 65536, 0, 393210, 65536, 0, 393211, 131072, 0, 393212, 196608, 0, 393207, 65536, 0, 393208, 131072, 0, 393209, 196608, 0, 327689, 131072, 0, 327690, 196608, 0)
+
+[node name="Box" type="Sprite2D" parent="."]
+position = Vector2(426, 81)
+rotation = -0.0860446
+texture = ExtResource("1_jc1ln")
+
+[node name="Box2" type="Sprite2D" parent="."]
+position = Vector2(462, 82)
+rotation = 0.0281688
+texture = ExtResource("1_jc1ln")
+
+[node name="Cat" parent="." instance=ExtResource("8_yrswb")]
+position = Vector2(9, 69)
+collision_mask = 1
+
+[node name="Damage Node" parent="." instance=ExtResource("10_tc66x")]
+position = Vector2(114, 24)
+rotation = -6.28318
+
+[node name="Lever" parent="." instance=ExtResource("10_is7bp")]
+position = Vector2(46, 72)
+node = NodePath("../webrequest")
+starting_state = 1
+
+[node name="Door" parent="." instance=ExtResource("9_gjag4")]
+position = Vector2(-43, 59)
+rotation = 1.5708
+position_to_move_to = Vector2(16.114, 37.699)
+move_speed = 5.0
+
+[node name="logprinter" parent="." instance=ExtResource("11_b4bw6")]
+position = Vector2(33, 33)
+_print = "Touch"
+
+[node name="laser" parent="." instance=ExtResource("11_xkvq2")]
+position = Vector2(-29, 72)
+laserpos = Vector2(0, -30.654)
+
+[node name="Ball" parent="." instance=ExtResource("9_vdxsq")]
+position = Vector2(-76, 45)
+mass = 0.14
+inertia = 1000.0
+
+[node name="pressure_plate" parent="." instance=ExtResource("10_5nfhk")]
+position = Vector2(-76, 72)
+node = NodePath("../Door")
+
+[node name="webrequest" parent="." instance=ExtResource("11_468wg")]
+position = Vector2(-14, 43)

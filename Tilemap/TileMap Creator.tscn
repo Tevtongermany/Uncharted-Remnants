@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://w3oucshspqef"]
+
+[ext_resource type="TileSet" uid="uid://c1j4ixeod6f3s" path="res://Tilemap/Terrains.tres" id="1_cr6yx"]
+[ext_resource type="TileSet" uid="uid://cy5a6phafv6k2" path="res://Tilemap/Terrain (no Collision).tres" id="2_g22ho"]
+
+[node name="Tilemap creator" type="Node2D"]
+
+[node name="Terrain" type="TileMap" parent="."]
+tile_set = ExtResource("1_cr6yx")
+format = 2
+
+[node name="Terrain(no Collision)" type="TileMap" parent="."]
+tile_set = ExtResource("2_g22ho")
+format = 2

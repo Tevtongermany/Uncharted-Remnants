@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://qk6ty1mnxew"]
+
+[ext_resource type="Script" path="res://props/Receiver/Laser/laser.gd" id="1_rvuya"]
+[ext_resource type="Texture2D" uid="uid://dodo5n14mtfxo" path="res://Assets/props/laser/Base.png" id="2_vg45v"]
+[ext_resource type="Texture2D" uid="uid://b1lgk3evmtju2" path="res://Assets/props/laser/Beam.png" id="3_mo5x2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h655h"]
+size = Vector2(14, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u8dqo"]
+size = Vector2(8, 2)
+
+[node name="laser" type="Node2D"]
+script = ExtResource("1_rvuya")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(0, 4)
+target_position = Vector2(0, -4)
+collision_mask = 2
+
+[node name="Base" type="Sprite2D" parent="."]
+modulate = Color(0.356863, 0.356863, 0.356863, 1)
+texture = ExtResource("2_vg45v")
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(0.141, 0)
+points = PackedVector2Array(0, 4, 0, 0)
+width = 4.448
+texture = ExtResource("3_mo5x2")
+texture_mode = 1
+
+[node name="Marker2D" type="Marker2D" parent="."]
+gizmo_extents = 2.0
+
+[node name="Base Collison" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="Base Collison Shape" type="CollisionShape2D" parent="Base Collison"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_h655h")
+
+[node name="laser" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="Laser" type="CollisionShape2D" parent="laser"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_u8dqo")

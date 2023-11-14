@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cddu4megjksgc"]
+
+[ext_resource type="Script" path="res://main menu/main menu ui.gd" id="1_s2146"]
+[ext_resource type="FontFile" uid="uid://dnummwmtqfq31" path="res://UI/Font/ARCADE_N.TTF" id="1_utfm5"]
+
+[node name="main menu ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s2146")
+
+[node name="Play" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.2, 0.2)
+
+[node name="Play" type="Button" parent="Play"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_utfm5")
+text = "Play"
+
+[node name="Exit" type="Button" parent="Play"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_utfm5")
+text = "Exit"
+
+[connection signal="pressed" from="Play/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Play/Exit" to="." method="_on_exit_pressed"]

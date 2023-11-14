@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dyoa7ev1uxigp"]
+
+[ext_resource type="FontFile" uid="uid://cf6y6fi5c12dc" path="res://UI/Font/VCR_OSD_MONO_1.001.ttf" id="1_s43fm"]
+
+[resource]
+default_font = ExtResource("1_s43fm")
+default_font_size = 25

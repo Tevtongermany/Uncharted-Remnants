@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://b570y16x5lkmb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dx4ra"]
+
+[node name="Ball" type="RigidBody2D"]
+visibility_layer = 7
+collision_layer = 7
+mass = 0.01
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 3
+visibility_layer = 7
+shape = SubResource("CircleShape2D_dx4ra")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 7.0
+offset_bottom = 7.0

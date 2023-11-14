@@ -1,0 +1,8 @@
+{
+	"0":{"name":"The Voice", "text":"Oh, it's you, well how are you doing?","expression":"none"},
+	"1":{"name":"The Voice", "text":"Sorry, forgot that you can't speak","expression":"none"},
+	"2":{"name":"The Voice", "text":"Anyway, are you still stuck in the cave?","expression":"none"},
+	"3":{"name":"The Voice", "text":"Ah, damn dumb me, sorry I forgot again that you can't speak it was a long time since I talked to some one ","expression":"none"},
+	"4":{"name":"The Voice", "text":"The good thing is Gabe is still searching you Viktor","expression":"none"},
+	"5":{"name":"The Voice", "text":"You should try to search a way out of the cave","expression":"none"},
+}

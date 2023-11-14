@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh8cu3wvku4pk"]
+
+[ext_resource type="Texture2D" uid="uid://cvldjonwi75wk" path="res://Assets/props/Inverter/inverter.png" id="1_8iob8"]
+[ext_resource type="Script" path="res://props/Receiver/Inverter/Inverter.gd" id="2_d21oo"]
+
+[node name="Inverter" type="Node2D"]
+script = ExtResource("2_d21oo")
+
+[node name="Inverterico" type="Sprite2D" parent="."]
+texture = ExtResource("1_8iob8")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1u32i13w0op5"
+path="res://.godot/imported/IX FALL$ - PURGATORY.mp3-3711c5b9e063024eed25a29a861e96c2.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/IX FALL$ - PURGATORY.mp3"
+dest_files=["res://.godot/imported/IX FALL$ - PURGATORY.mp3-3711c5b9e063024eed25a29a861e96c2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

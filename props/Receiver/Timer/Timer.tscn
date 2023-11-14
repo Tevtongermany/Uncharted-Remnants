@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://u8a360ud8wm"]
+
+[ext_resource type="Script" path="res://props/Receiver/Timer/Timer.gd" id="1_krpln"]
+[ext_resource type="Texture2D" uid="uid://0df4u6cb6qq5" path="res://Assets/props/timer/Timer.png" id="2_te5li"]
+
+[node name="Timer" type="Node2D"]
+script = ExtResource("1_krpln")
+Should_State_Affect = 1
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_te5li")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

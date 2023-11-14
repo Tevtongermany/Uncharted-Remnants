@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://props/Receiver/Debug log printer/logprinter.gd" id="1_fw54k"]
+[ext_resource type="Texture2D" uid="uid://dywhkqgmk8dua" path="res://Assets/props/logprinter/logprinter.png" id="2_dbnld"]
+
+[node name="logprinter" type="Node2D"]
+script = ExtResource("1_fw54k")
+
+[node name="Logprintericon" type="Sprite2D" parent="."]
+texture = ExtResource("2_dbnld")
